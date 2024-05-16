@@ -1,15 +1,17 @@
-function AbilityScores() {
+import { Abilities } from "../types";
+
+function AbilityScores({scoreset}: Abilities) {
 
 
     return(
         <>
             <div>
-                Strength: 10
-                Dexterity: 12
-                Constitution: 14
-                Intelligence: 16
-                Wisdom: 12
-                Charisma: 12
+                Strength: {scoreset.strength}
+                Dexterity: {scoreset.dexterity}
+                Constitution: {scoreset.constitution}
+                Intelligence: {scoreset.intelligence}
+                Wisdom: {scoreset.wisdom}
+                Charisma: {scoreset.charisma}
             </div>
         </>
     )
