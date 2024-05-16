@@ -1,3 +1,5 @@
+import AbilityScores from "./components/AbilityScores";
+import CharacterDetails from "./components/CharacterDetails";
 
 function App() {
 
@@ -5,6 +7,8 @@ function App() {
   return (
     <>
       <div>D&D Character sheet</div>
+      <CharacterDetails />
+      <AbilityScores />
     </>
   )
 }
