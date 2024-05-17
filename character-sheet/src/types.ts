@@ -9,6 +9,16 @@ export interface Abilities {
     }
 }
 
+export interface Currency {
+    coins: {
+        platinum: number,
+        gold: number,
+        electrum: number,
+        silver: number,
+        copper: number
+    }
+}
+
 export interface Details {
     details: {
         name: string,
