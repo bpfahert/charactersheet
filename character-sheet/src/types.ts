@@ -5,7 +5,10 @@ export interface Character {
     attacks: AttacksAndSpells,
     equipment: string[],
     notes?: string[],
-    proficiencies: Proficiencies,
+    saving_throw_proficiencies: SavingThrowProficiencies,
+    skill_proficiencies: SkillProficiencies,
+    other_proficiencies: string[],
+    languages: string[],
     stats: {
         level: number,
         ability_scores: Abilities,
@@ -37,26 +40,28 @@ export interface AttacksAndSpells {
 
 
 export interface BattleStats {
-    armor_class: number,
-    initiative: number,
-    speed: {
-        walking: number,
-        climbing: number,
-        flying: number,
-    },
-    hit_points: {
-        current_hp: number,
-        max_hp: number,
-        temp_hp: number,
+    stats: {
+        armor_class: number,
+        initiative_bonus: number,
+        speed: {
+            walking: number,
+            climbing?: number,
+            flying?: number,
+        },
+        hit_points: {
+            current_hp: number,
+            max_hp: number,
+            temp_hp: number,
+        }
+        hit_dice: {
+            total_hit_dice: number,
+            current_hit_dice: number,
+        },
+        death_saves: {
+            successes: number,
+            failures: number,
+        }
     }
-    hit_dice: {
-        total_hit_dice: number,
-        current_hit_dice: number,
-    },
-    death_saves: {
-        successes: number,
-        failures: number,
-    },
 }
 
 export interface Currency {
@@ -90,15 +95,18 @@ export interface Details {
     }    
 }
 
-export interface Proficiencies {
+export interface SavingThrowProficiencies {
     saving_throws: {
         strength: boolean,
         dexterity: boolean,
-        constituion: boolean,
+        constitution: boolean,
         intelligence: boolean,
         wisdom: boolean,
         charisma: boolean,
-    },
+    }
+}
+
+export interface SkillProficiencies {
     skills: {
         acrobatics: boolean,
         animal_handling: boolean,
@@ -118,7 +126,5 @@ export interface Proficiencies {
         sleight_of_hand: boolean,
         stealh: boolean,
         survival: boolean,
-    },
-    other_proficiencies: string[],
-    languages: string[],
+    }
 }
