@@ -27,13 +27,12 @@ export interface Abilities {
 }
 
 export interface AttacksAndSpells {
-    attack: {
+    attacks: {
         name: string,
         attack_bonus: number,
         damage: string,
         damage_type: string,
     }[],
-    notes: string,
 }
 
 
