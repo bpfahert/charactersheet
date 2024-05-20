@@ -1,29 +1,29 @@
-import { SkillProficiencies} from "../types";
+import { SkillProficiencies, AbilityMods} from "../types";
 
 
-function Skills({skills}: SkillProficiencies) {
+function Skills({skills, abilityMods}: SkillProficiencies & AbilityMods) {
     
     return(
         <>
             <h3>Skills</h3>
-            <h5>Acrobatics: {skills.acrobatics ? "Yes" : "No"}</h5>
-            <h5>Animal Handling: {skills.animal_handling ? "Yes" : "No"}</h5>
-            <h5>Arcana: {skills.arcana ? "Yes" : "No"}</h5>
-            <h5>Athletics: {skills.athletics ? "Yes" : "No"}</h5>
-            <h5>Deception: {skills.deception ? "Yes" : "No"}</h5>
-            <h5>History: {skills.history ? "Yes" : "No"}</h5>
-            <h5>Insight: {skills.insight ? "Yes" : "No"}</h5>
-            <h5>Intimidation: {skills.intimidation ? "Yes" : "No"}</h5>
-            <h5>Investigation: {skills.investigation ? "Yes" : "No"}</h5>
-            <h5>Medicine: {skills.medicine ? "Yes" : "No"}</h5>
-            <h5>Nature: {skills.nature ? "Yes" : "No"}</h5>
-            <h5>Perception: {skills.perception ? "Yes" : "No"}</h5>
-            <h5>Performance: {skills.performance ? "Yes" : "No"}</h5>
-            <h5>Persuasion: {skills.persuasion ? "Yes" : "No"}</h5>
-            <h5>Religion: {skills.religion ? "Yes" : "No"}</h5>
-            <h5>Sleight of Hand: {skills.sleight_of_hand ? "Yes" : "No"}</h5>
-            <h5>Stealh: {skills.stealh ? "Yes" : "No"}</h5>
-            <h5>Survival: {skills.survival ? "Yes" : "No"}</h5>
+            <h5>Acrobatics: {abilityMods.dexterity + (skills.acrobatics ? abilityMods.proficiency : 0)}</h5>
+            <h5>Animal Handling: {abilityMods.wisdom + (skills.animal_handling ? abilityMods.proficiency : 0)}</h5>
+            <h5>Arcana: {abilityMods.intelligence + (skills.arcana ? abilityMods.proficiency : 0)}</h5>
+            <h5>Athletics: {abilityMods.strength + (skills.athletics ? abilityMods.proficiency : 0)}</h5>
+            <h5>Deception: {abilityMods.charisma + (skills.deception ? abilityMods.proficiency : 0)}</h5>
+            <h5>History: {abilityMods.intelligence + (skills.history ? abilityMods.proficiency : 0)}</h5>
+            <h5>Insight: {abilityMods.wisdom + (skills.insight ? abilityMods.proficiency : 0)}</h5>
+            <h5>Intimidation: {abilityMods.charisma + (skills.intimidation ? abilityMods.proficiency : 0)}</h5>
+            <h5>Investigation: {abilityMods.intelligence + (skills.investigation ? abilityMods.proficiency : 0)}</h5>
+            <h5>Medicine: {abilityMods.wisdom + (skills.medicine ? abilityMods.proficiency : 0)}</h5>
+            <h5>Nature: {abilityMods.intelligence + (skills.nature ? abilityMods.proficiency : 0)}</h5>
+            <h5>Perception: {abilityMods.wisdom + (skills.perception ? abilityMods.proficiency : 0)}</h5>
+            <h5>Performance: {abilityMods.charisma + (skills.performance ? abilityMods.proficiency : 0)}</h5>
+            <h5>Persuasion: {abilityMods.charisma + (skills.persuasion ? abilityMods.proficiency : 0)}</h5>
+            <h5>Religion: {abilityMods.intelligence + (skills.religion ? abilityMods.proficiency : 0)}</h5>
+            <h5>Sleight of Hand: {abilityMods.dexterity + (skills.sleight_of_hand ? abilityMods.proficiency : 0)}</h5>
+            <h5>Stealh: {abilityMods.dexterity + (skills.stealh ? abilityMods.proficiency : 0)}</h5>
+            <h5>Survival: {abilityMods.wisdom + (skills.survival ? abilityMods.proficiency : 0)}</h5>
         </>
     )
 }

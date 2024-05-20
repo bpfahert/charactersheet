@@ -29,6 +29,18 @@ export interface Abilities {
     }
 }
 
+export interface AbilityMods {
+    abilityMods: {
+        strength: number,
+        dexterity: number,
+        constitution: number,
+        intelligence: number,
+        wisdom: number,
+        charisma: number,
+        proficiency: number,
+    },
+}
+
 export interface AttacksAndSpells {
     attacks: {
         name: string,
@@ -96,7 +108,7 @@ export interface Details {
 }
 
 export interface SavingThrowProficiencies {
-    saving_throws: {
+    savingThrows: {
         strength: boolean,
         dexterity: boolean,
         constitution: boolean,
