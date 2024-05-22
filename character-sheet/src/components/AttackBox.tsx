@@ -8,8 +8,18 @@ interface AttackProps {
 }
 
 function AttacksBox({attacks, abilityMods}: AttackProps & AbilityModProps) {
+
+    function calculateAttackBonus (attackType: string) {
+        if (attackType === "Ranged" || (attackType === "Finesse" && abilityMods.dexterity > abilityMods.strength)) {
+            return abilityMods.dexterity
+        }
+        else {
+            return abilityMods.strength;
+        }
+    }
+
     const attackElements = attacks.map((attack) => {
-        const bonus = abilityMods.dexterity + (attack.proficient ?  abilityMods.proficiency : 0);
+        const bonus = calculateAttackBonus(attack.attack_type) + (attack.proficient ?  abilityMods.proficiency : 0);
 
         return(
             <div key={attack.id}>

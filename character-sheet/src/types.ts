@@ -48,6 +48,7 @@ export interface AttacksAndSpells {
         damage_type: string,
         proficient: boolean,
         id: string,
+        attack_type: string,
 }
 
 
