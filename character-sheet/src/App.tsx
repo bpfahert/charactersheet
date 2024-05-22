@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import CharacterSheet from "./components/CharacterSheet";
 import { Character } from "./types";
 import AbilityScores from "./components/AbilityScores";
@@ -8,7 +9,7 @@ function App() {
     details: {name: "Caleb", class_one: {class: "wizard", level: 4}, race: "human", background: "student"},
     features_and_traits: ["Feat - Keen Mind - Always know true north and the time of day.", "Darkvision - Can see in darkness up to 60 feet"],
     money: {platinum: 0, gold: 50, electrum: 0, silver: 12, copper: 5},
-    attacks: [{name: "Scimitar", attack_bonus: 3, damage: "1d8", damage_type: "Slashing"}, {name: "Quarterstaff", attack_bonus: 2, damage: "1d6", damage_type: "Bludgeoning"}],
+    attacks: [{name: "Scimitar", damage: "1d8", damage_type: "Slashing", proficient: true, id: uuidv4()}, {name: "Quarterstaff", damage: "1d6", damage_type: "Bludgeoning", proficient: true,  id: uuidv4()}, {name: "Dagger", damage: "1d6", damage_type: "piercing", proficient: false,  id: uuidv4()}],
     equipment: ["Adventurer's kit", "Rope", "Thieve's Tools"],
     saving_throw_proficiencies: {strength: false, dexterity: false, constitution: true, intelligence: true, wisdom: true, charisma: false},
     skill_proficiencies: {acrobatics: false, animal_handling: false,arcana: true, athletics: false, deception: false, history: true, insight: true, intimidation: false, investigation: false, medicine: true, nature: false, perception: true, performance: false, persuasion: false, religion: true, sleight_of_hand: false, stealh: false, survival: true},

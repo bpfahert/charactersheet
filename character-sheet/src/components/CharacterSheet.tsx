@@ -19,7 +19,7 @@ function CharacterSheet({character} : {character : Character}) {
           <AbilityScores scoreset={character.stats.ability_scores} />
           <Skills skills={character.skill_proficiencies} abilityMods={character.ability_modifiers}/>
           <SavingThrows savingThrows={character.saving_throw_proficiencies} abilityMods={character.ability_modifiers}/>
-          <AttacksBox attacks={character.attacks} />
+          <AttacksBox attacks={character.attacks} abilityMods={character.ability_modifiers}/>
           <Coins coins={character.money} />
           <EquipmentBox equipment={character.equipment}/>
         </>

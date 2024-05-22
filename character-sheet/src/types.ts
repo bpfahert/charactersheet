@@ -44,9 +44,10 @@ export interface AbilityModProps {
 
 export interface AttacksAndSpells {
         name: string,
-        attack_bonus: number,
         damage: string,
         damage_type: string,
+        proficient: boolean,
+        id: string,
 }
 
 
