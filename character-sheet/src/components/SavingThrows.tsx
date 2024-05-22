@@ -1,7 +1,11 @@
 import { SavingThrowProficiencies} from "../types";
-import { AbilityMods } from "../types";
+import { AbilityModProps } from "../types";
 
-function SavingThrows({savingThrows, abilityMods}: SavingThrowProficiencies & AbilityMods) {
+interface SavingThrowProps {
+    savingThrows: SavingThrowProficiencies,
+}
+
+function SavingThrows({savingThrows, abilityMods}: SavingThrowProps & AbilityModProps) {
     
 
     return(

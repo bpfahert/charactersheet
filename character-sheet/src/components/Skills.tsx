@@ -1,7 +1,11 @@
-import { SkillProficiencies, AbilityMods} from "../types";
+import { SkillProficiencies} from "../types";
+import { AbilityModProps } from "../types";
 
+interface SkillProps {
+    skills: SkillProficiencies,
+}
 
-function Skills({skills, abilityMods}: SkillProficiencies & AbilityMods) {
+function Skills({skills, abilityMods}: SkillProps & AbilityModProps) {
     
     return(
         <>

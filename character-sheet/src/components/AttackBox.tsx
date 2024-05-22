@@ -1,6 +1,11 @@
 import { AttacksAndSpells } from "../types";
+import { AbilityModProps } from "../types";
 
-function AttacksBox({attacks}: AttacksAndSpells) {
+interface AttackProps {
+    attacks: AttacksAndSpells[],
+}
+
+function AttacksBox({attacks}: AttackProps) {
 
     return(
         <>

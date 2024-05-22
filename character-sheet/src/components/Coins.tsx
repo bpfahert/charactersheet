@@ -1,6 +1,10 @@
 import { Currency } from "../types";
 
-function Coins({coins}: Currency) {
+interface CurrencyProp {
+    coins: Currency,
+}
+
+function Coins({coins}: CurrencyProp) {
     
 
     return(

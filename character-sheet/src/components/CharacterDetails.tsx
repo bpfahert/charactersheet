@@ -1,6 +1,10 @@
 import { Details } from "../types";
 
-function CharacterDetails({details}: Details) {
+interface DetailsProp {
+    details: Details,
+}
+
+function CharacterDetails({details}: DetailsProp) {
     
     return(
         <>

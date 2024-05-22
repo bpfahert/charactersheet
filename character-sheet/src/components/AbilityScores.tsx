@@ -1,6 +1,10 @@
 import { Abilities } from "../types";
 
-function AbilityScores({scoreset}: Abilities) {
+interface AbilityScoreProp {
+    scoreset: Abilities,
+}
+
+function AbilityScores({scoreset}: AbilityScoreProp) {
 
 
     return(

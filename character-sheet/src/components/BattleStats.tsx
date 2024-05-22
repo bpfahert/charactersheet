@@ -1,6 +1,11 @@
 import { BattleStats } from "../types";
 
-function Stats({stats}: BattleStats) {
+interface BattleStatsProp {
+    stats: BattleStats,
+
+}
+
+function Stats({stats}: BattleStatsProp) {
 
     return(
         <>
