@@ -2,7 +2,8 @@ export interface Character {
     details: Details,
     features_and_traits: string[],
     money: Currency,
-    attacks: AttacksAndSpells[],
+    attacks: Attack[],
+    spells: Spell[],
     equipment: string[],
     notes?: string[],
     saving_throw_proficiencies: SavingThrowProficiencies,
@@ -42,7 +43,7 @@ export interface AbilityModProps {
     abilityMods: AbilityMods,
 }
 
-export interface Attacks {
+export interface Attack {
         name: string,
         damage: string,
         damage_type: string,
@@ -141,5 +142,6 @@ export interface Spell {
     components: string,
     classes: string,
     description: string,
+    higher_levels?: string,
 
 }
