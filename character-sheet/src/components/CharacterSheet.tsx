@@ -14,7 +14,6 @@ function CharacterSheet({character} : {character : Character}) {
 
     return (
         <>
-          <div>D&D Character sheet</div>
           <CharacterDetails details={character.details}/>
           <Stats stats={character.stats.battle_stats}/>
           <AbilityScores scoreset={character.stats.ability_scores} />

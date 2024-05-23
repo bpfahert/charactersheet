@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import CharacterSheet from "./components/CharacterSheet";
 import { Character } from "./types";
-import AbilityScores from "./components/AbilityScores";
+import NewCharacterForm from "./components/NewCharacterForm";
 
 function App() {
   const [characterOne, setCharacterOne] = useState<Character>({
@@ -42,9 +42,10 @@ function App() {
  }, [characterOne.stats.ability_scores, characterOne.stats.level]);
 
   return (
-    <>
-      <div>D&D Character sheet</div>
+    <>          
+      <h2>D&D Character sheet</h2>
       <CharacterSheet character={characterOne} />
+      <NewCharacterForm />
     </>
   )
 }
