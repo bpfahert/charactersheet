@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import EquipmentBox from "./EquipmentBox";
 import { Character } from "../types";
 import SpellList from "./SpellList";
+import MiscStringList from "./MiscStringList";
 
 function CharacterSheet({character} : {character : Character}) {
 
@@ -23,6 +24,10 @@ function CharacterSheet({character} : {character : Character}) {
           <SpellList spells={character.spells} />
           <Coins coins={character.money} />
           <EquipmentBox equipment={character.equipment}/>
+          <MiscStringList list={character.features_and_traits} title={"Features and Traits"} />
+          <MiscStringList list={character.languages} title={"Languages"} />
+          <MiscStringList list={character.other_proficiencies} title={"Other Proficiencies"} />
+          {character.notes ? <MiscStringList list={character.notes} title={"Notes"}/> : ""}
         </>
       )
 }

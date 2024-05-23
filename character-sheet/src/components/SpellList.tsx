@@ -15,6 +15,7 @@ function SpellList({spells}: SpellListProps) {
     
     return(
         <>
+            <h3>Spells:</h3>
             <ul>
                 {spellListElements}
             </ul>
