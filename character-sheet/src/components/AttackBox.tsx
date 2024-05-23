@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { AttacksAndSpells } from "../types";
+import { Attacks } from "../types";
 import { AbilityModProps } from "../types";
 
 
 interface AttackProps {
-    attacks: AttacksAndSpells[],
+    attacks: Attacks[],
 }
 
 function AttacksBox({attacks, abilityMods}: AttackProps & AbilityModProps) {

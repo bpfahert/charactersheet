@@ -42,7 +42,7 @@ export interface AbilityModProps {
     abilityMods: AbilityMods,
 }
 
-export interface AttacksAndSpells {
+export interface Attacks {
         name: string,
         damage: string,
         damage_type: string,
@@ -129,4 +129,17 @@ export interface SkillProficiencies {
     sleight_of_hand: boolean,
     stealh: boolean,
     survival: boolean,
+}
+
+export interface Spell {
+    name: string,
+    level: number,
+    type: string,
+    school: string,
+    range: string,
+    target: string,
+    components: string,
+    classes: string,
+    description: string,
+
 }
